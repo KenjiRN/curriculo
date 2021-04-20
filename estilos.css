@@ -1,0 +1,102 @@
+#paineis-sobre{
+	margin-top:20px;
+
+
+}
+
+html, 
+body {   /* pai e avo do header devem estar completas junto ao neto para poder a img encher todo o header  */
+    height: 100%;
+}
+
+header {    /* como é decorativa a img vem para o CSS  */
+    background-image: url(img/dreamer.jpg);    /*  img de fundo  */
+    background-size: cover;   /* imagem se encaixa direito no fundo  */
+    background-position:top center;   /* centraliza a imagem  */
+    height: 100%;   /*  ocupara toda extensao do cabeçalho, mas precisa o pai e avô tbm estar com essas medidas */
+    position: relative;  /*posto aqui para poder aplicar o banner ao meio*/
+}
+header h1{
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.banner{
+	color: #FFF;
+	background-color: rgba(0,0,0,0.5);
+	padding: 20px;   /*espaçamento do background em relacao ao botao e ao h1*/
+	width: 80% ;   /*diminui o background do rbga*/
+	border-radius: 8px;
+	position: absolute;   /*esse cara vai se posicionar com relacao a header(pai)*/
+	top:50%;   /*REVER ESTES 4 ULTIMOS*/
+	transform:translate(-40%, -40%);
+	left: 40%;
+	transition:.3s;  /*ACRESCENTA-SE ESTE PARA QUANDO O MENU SANDUICHE SUBIR OU FECHAR, O BANNER SE DESLOCAR PARA BAIXO, FAZ LIGACAO JUNTO AO ARQUIVO NAVBAR-ANIMATION-FIX.JS*/
+
+}
+
+#paineis-sobre h3{
+	font-size: 20px;
+	    font-weight: bold;
+	}
+
+.projetos h2{
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.titulo-depoimentos {
+    background-color: #0275D8;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color:#FFF;
+    margin-bottom: 0;
+    font-size: 24px;
+
+}
+
+.contato-select, .grupo-radio {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.grupo-radio .radio:first-child {
+    margin-top: 0;
+}			
+			
+ footer {
+ 	
+ 	background-color: #333;
+ 	color: #FFF;
+ 	padding:20px;
+ 	margin-top:15px;   
+ }
+footer address:last-child{
+	margin-bottom: 0;
+}
+
+@media(min-width: 768px){
+	#paineis-sobre {      /*vai zerar a margem de cima*/
+		margin-top: 0;
+	}
+
+}
+
+
+@media(min-width: 992px){
+	.banner{
+		left: 0;
+		transform: translate(0,-80%);
+		width: 50%;
+
+
+
+	}
+	.banner2{
+		position: relative;
+		height: 100%;
+	}
+
+
+}
