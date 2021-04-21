@@ -1,0 +1,398 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">   <!-- Mudando a fonte do html  -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">     <!-- tag de configuração, mas ainda nao resolve pois precisa-se configurar a imagem, todavia usamos o bootstrap para arrumar isso. Bootstrap>>images> responsive images: "img-responsive"  dentro da imagem após o h2  -->
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+
+</head>
+
+<body>
+	<header>
+								<!--   MENU-nav e banner   -->
+		<nav class="navbar navbar-default">             <!--   MENU TOPO NAV |   Se carregarmos a página veremos que temos o espaçamento e ocorre uma mudança da cor de fundo.    --> <!--2ª -->
+			<div class="container">  <!--2ª -->
+
+				<div class="navbar-header">       <!-- bootstrap>nav Ainda teremos um problema de desalinhamento. Observando o código da documentação vemos que falta ainda o navbar-header que está envolvendo tudo, ele é como se fosse o cabeçalho do "Menu". Precisamos adicionar uma tag div e uma classe navbar-header: -->    <!--3ª -->
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sanduiche" aria-expanded="false">							 <!--  bootstrap>nav: MENU HAMBURGUER: 2º PARTE, O DATA TOGGLE INDICA A ACAO DE COLAPSAR(DIMINUIR) E O DATA TARGET APONTA QUEM SOFRERÁ ESSA ACAO que no caso será a ID NOMEADA NO DIV ABAIXO e o aria-expanded é  estado atual do elementoque indica que inicialmente o sanduiche estara fechado --> <!--3ª -->
+						<span class="sr-only">Toggle navigation</span>  <!--3ª -->
+						<span class="icon-bar"></span>  <!--3ª   ESSES SPAN SAO REFERENTE AO TRACINHO DO SANDUICHE FECHADO -->
+						
+					</button>
+
+					<a class="navbar-brand" href="index.html"><strong>Kenji Rocha Nakajima</strong></a>    <!-- TITULO-MARCA: CLASS RETIRADA DO BOOTSTRAP que fará        TITULO-->   <!--3ª -->
+				</div>
+
+				<div class="navbar-collapse collapse" id="sanduiche" >   <!-- bootstrap>nav: essa class serve para fazer o menu hamburguer: 1º PARTE...COLAPSAR (ate aqui so faz desaparecer)  -->    <!--3ª -->
+					<ul class="nav navbar-nav">         <!-- bootstrap>nav  -->   <!--1ª -->
+
+						<li><a href="index.html"><strong>Home</strong></a></li>		<!--1ª -->
+					</ul>						<!--1ª -->
+				</div>   <!--1ª -->
+			</div>
+		</nav>  <!--1ª -->
+
+		<div class="container banner2">
+			<div class="banner">                             <!--BANNER: H1 P BUTTON. class para estilizar as letras do banner no estilos.css -->
+				<h1>	<STRONG>Sejam bem-vindo(a)s,</STRONG> </h1>   
+				<p> Nessa sessão esta detalhada parte  de minha trajetória ao longo de minha jornada acadêmica. Tive a oportunidade e privilegio de fazer parte de alguns projetos. <br>Abaixo segue um breve resumo de cada um. </p>
+				<button class="btn btn-info btn-lg "><a href="#myway">ツ</a></button>   <!--TUDO ACHADO NO BOOTSTRAP -->
+			</div>
+		</div>
+	</header>
+
+	<!--
+	<div class="jumbotron">       OUTDOOR
+		<div class="container">
+			<img  class="img-responsive col-sm-6" src="img/empresa.jpg" alt="Imagem de 二 盧 por Pixabay" >
+			<h3>Prezados Sr e Sra, sejam bem-vindo(a)s</h3>
+				<p>Ao longo de minha jornada acadêmica tive a oportunidade e privilegio de fazer parte de alguns projetos, alguns com vínculo com a Instituição, UFAM,sob mentoria do ilustre Prof. Dr. Claudio Frota a quem sou eternamente grato pelo aprendizado e afiada visão estratégica.  </p>
+		</div>
+	</div> -->
+
+
+	<section id="sobre-nos" class="container">    <!-- sobre mim -->
+		<h2 id="myway">My way</h2>
+
+		<div class="row">
+			<img class="img-responsive col-sm-6" src="img/way.jpg">   <!-- COL-MD-6: CLASS BOOTSTRAP PARA MUDAR O LAYOUT EM RESPONSIVO. IMAGENS LADO A LADO POR EXEMPLO -->
+
+			<div class="panel-group col-sm-6" id="paineis-sobre">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title" data-toggle="collapse" data-target="#primeiro-paragrafo" data-parent="#paineis-sobre">Inovação</h3>
+					</div>
+					<div id="primeiro-paragrafo" class="collapse in">
+						<div class="panel-body">
+							<p ><strong>Engenharia Mecânica</strong> - FUCAPI: Ao longo destes 5 anos agreguei bastante conhecimento lógico, desenvolvi a parte tática minha jornada acadêmica tive a oportunidade e privilegio de fazer parte de uma Consultoria Empresarial da UFAM, sob mentoria dos ilustres Prof. Dr. Claudio Frota e Aristides Oliveira  a quem sou eternamente grato pelo aprendizado e afiada visão estratégica que me agregaram. </p> 
+						</div>
+					</div>
+				</div>
+
+
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title" data-toggle="collapse" data-target="#segundo-paragrafo" data-parent="#paineis-sobre">Adaptabilidade</h3>
+					</div>
+					<div id="segundo-paragrafo" class="collapse">    
+						<div class="panel-body">
+							<p> <strong>Técnico em Automação</strong> - CETAM: durante os aproximadamente dois anos nesta instituição, houveram diversos projetos na parte técnica, dentre eles dois de destaque foram o projeto de um estacionamento rotativo automatizado seguido pelo trabalho de conclusão de curso, um projeto que viabilizava uma fonte de energia alternativa com o uso de sensores piezo-elétricos </p> 
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title" data-toggle="collapse" data-target="#terceiro-paragrafo" data-parent="#paineis-sobre">Criatividade</h3>
+					</div>
+					<div id="terceiro-paragrafo" class="collapse">
+						<div class="panel-body">
+							<p > <strong>Desenvolvedor Front-end</strong> - SENAI: Ao longo dos anos tenho aprimorado esse lado tecnológico ao qual sinto enorme prazer. Imaginar, fazer, construir</p> 
+						</div>
+					</div>
+				</div>
+								<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title" data-toggle="collapse" data-target="#quarto-paragrafo" data-parent="#paineis-sobre">Visão estratégica</h3>
+					</div>
+					<div id="quarto-paragrafo" class="collapse">
+						<div class="panel-body">
+							<p > <strong>Administração</strong> - UFAM: Ao longo de minha jornada acadêmica tive a oportunidade e privilegio de fazer parte de uma Consultoria Empresarial da UFAM, sob mentoria dos ilustres Prof. Dr. Claudio Frota e Aristides Oliveira  a quem sou eternamente grato pelo aprendizado e afiada visão estratégica que me agregaram.</p> 
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>  
+	</section>
+
+	<section id="sobre-nos" class="container">    <!-- projetos UFAM -->
+		<h2 id="myway">UNIVERSIDADE FEDERAL DO AMAZONAS</h2>
+
+		<div class="row">
+			<img class="img-responsive col-sm-6" src="UFAM.png" width="100px" height="100px">   <!-- COL-MD-6: CLASS BOOTSTRAP PARA MUDAR O LAYOUT EM RESPONSIVO. IMAGENS LADO A LADO POR EXEMPLO -->
+
+			<div class="panel-group col-sm-6" id="paineis-sobre">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title" data-toggle="collapse" data-target="#primeiro1-paragrafo" data-parent="#paineis-sobre">CONUNI</h3>
+					</div>
+					<div id="primeiro1-paragrafo" class="collapse in">
+						<div class="panel-body">
+							<p ><strong>2008 - 2010:</strong>  Em 2008 tive a oportunidade de ingressar na Consultoria Empresarial da Faculdade de Estudos Sociais da UFAM. Sob mentoria de Mestres como Prof. Dr. <a href="https://www.escavador.com/sobre/4313949/claudio-dantas-frota">Claudio Frota, </a> Professor e atual Reitor, <a href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4703590P8">Sylvio Puga </a>
+								e Prof.<a href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4137011A5"> Aristides da Rocha</a>.</p> 
+						</div>
+					</div>
+				</div>
+
+
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title" data-toggle="collapse" data-target="#segundo2-paragrafo" data-parent="#paineis-sobre">SUFRAMA</h3>
+					</div>
+					<div id="segundo2-paragrafo" class="collapse">    
+						<div class="panel-body">
+							<p> <strong>Construção de indicadores para a avaliação socioeconômica dos projetos de interiorização</strong> - O projeto 
+								compreende as atividades de aprimorar os mecanismos de avaliação de projetos de interiorização, com vistas a
+								uma ampla revisão dos Indicadores Econômicos, Sociais e Financeiros dos Projetos de Interiorização da SUFRAMA em
+								sua área de jurisdição.<br>
+								Esses indicadores definem seu escopo de
+								atuação nas 06(seis) Áreas e Políticas Estratégicas, sendo estas:<br><br>
+								<strong>1-Tecnologia: Formação de capital intelectual e formação de alianças estratégicas ou parcerias que desenvolvam
+								estudos e tecnologia<br>
+								2-Inserção internacional Competitiva: Incentivo às exportações<br>
+								3-Desenvolvimento Sustentável Local: Estimular as potencialidades regionais e as questões ambientais<br>
+								4-Atração de Investimentos: Adensamento das cadeias produtivas e atração de novos pólos produtivos<br>
+								5-Logística: Investimentos em infra-estrutura de armazenamento, energia e comunicação<br>
+								6-Desenvolvimento Institucional: Desenvolvimento interno e aprimoramento das relações inter institucional<br><br></strong>
+								A sinergia destas seis áreas tem como foco primordial a promoção do desenvolvimento sustentável, algo possível de ser
+								efetivado por meio da integração regional e distribuição de renda.
+								No que se refere ao desenvolvimento sustentável o mesmo deve contribuir para a construção de um modelo de
+								desenvolvimento da Amazônia, criando condições para a utilização sustentável da capacidade produtiva dos recursos
+								naturais, asseguradas a viabilidade econômica e a melhoria da qualidade de vida das populações locais.  </p> 
+						</div>
+					</div>
+				</div>
+
+
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title" data-toggle="collapse" data-target="#terceiro3-paragrafo" data-parent="#paineis-sobre">PNUD BRASIL </h3>
+					</div>
+					<div id="terceiro3-paragrafo" class="collapse">
+						<div class="panel-body">
+							<p > <strong>Programa das Nações Unidas para o Desenvolvimento no Brasil: projeto de desenvolvimento sustentável pelo uso produtivo 
+								de energia elétrica:</strong> O projeto resulta num documento onde a analisa a promoção do Desenvolvimento Local, por meio do uso produtivo,
+								educativo e eficiente dos serviços de energia elétrica através da integração das estruturas Produtiva, Social e Institucional,
+								reunindo quatro segmentos estratégicos, tendo por base:<br> <br>I. a Promoção da Inclusão Social, com foco no uso eficiente,
+								produtivo e social da energia elétrica como um vetor para o desenvolvimento;<br> II) a Estruturação dos Arranjos Produtivos
+								Locais;<br> III) o Fortalecimento do Ambiente de Clima de Negócios, especialmente os voltados para a produção de maquinas
+								e equipamentos para apoio a geração de energia; <br> IV) a Modernização e ampliação da Infra-estrutura Econômica Pública
+								e Privada.</p> 
+						</div>
+					</div>
+				</div>
+
+
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title" data-toggle="collapse" data-target="#terceiro33-paragrafo" data-parent="#paineis-sobre">Ministério Público Federal</h3>
+					</div>
+					<div id="terceiro33-paragrafo" class="collapse">
+						<div class="panel-body">
+							<p > <strong>Desenvolvimento do planejamento estratégico 2009-2014:</strong> O planejamento estratégico é de fundamental importância para as organizações
+							sejam elas público ou privada. É a ignição , o ponto de partida para as ações que são e serão realizadas ate alcançar a visão de futuro planejada. <br> Neste 
+						projeto foram realizadas pesquisas e levantamentos de indicadores que melhor se encaixavam onde a instituição queria estar - <strong>Visão</strong>, e através 
+						da definição de seus valores, objetivos, missão, indicadores e metas, foi realizado o planejamento 2009 - 2014.</p> 
+						</div>
+					</div>
+				</div>
+								<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title" data-toggle="collapse" data-target="#quarto4-paragrafo" data-parent="#paineis-sobre">PRODAM</h3>
+					</div>
+					<div id="quarto4-paragrafo" class="collapse">
+						<div class="panel-body">
+							<p > <strong>Pesquisa de clima organizacional:</strong> O clima organizacional é o retrato da realidade da empresa e influência diretamente na Eficiência, em sua produtividade.
+							Neste projeto foram feitos levantamentos e pesquisas internas que mediram o grau de comprometimento de cada departamento desta instituição.
+						O grau de comprometimento é variável dependendo de itens como a satisfação, motivação, relacionamento entre os colaboradores e lideres, modelos de gestão e política de cargos e salários.<br>Através deste projeto foram adotadas políticas de melhoria que incentivam o trabalho de cada colaborador. </p> 
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>  
+	</section>
+
+	<section id="sobre-nos" class="container">    <!-- projetos UFAM -->
+		<h2 id="myway">UNIVERSIDADE FEDERAL DO AMAZONAS</h2>
+
+		<div class="row">
+			<img class="img-responsive col-sm-6" src="UFAM.png" width="100px" height="100px">   <!-- COL-MD-6: CLASS BOOTSTRAP PARA MUDAR O LAYOUT EM RESPONSIVO. IMAGENS LADO A LADO POR EXEMPLO -->
+
+			<div class="panel-group col-sm-6" id="paineis-sobre">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title" data-toggle="collapse" data-target="#primeiro1-paragrafo" data-parent="#paineis-sobre">CONUNI</h3>
+					</div>
+					<div id="primeiro1-paragrafo" class="collapse in">
+						<div class="panel-body">
+							<p ><strong>2008 - 2010:</strong>  Em 2008 tive a oportunidade de ingressar na Consultoria Empresarial da Faculdade de Estudos Sociais da UFAM. Sob mentoria de Mestres como Prof. Dr. <a href="https://www.escavador.com/sobre/4313949/claudio-dantas-frota">Claudio Frota, </a> Professor e atual Reitor, <a href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4703590P8">Sylvio Puga </a>
+								e Prof.<a href="http://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4137011A5"> Aristides da Rocha</a>.</p> 
+						</div>
+					</div>
+				</div>
+
+
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title" data-toggle="collapse" data-target="#segundo2-paragrafo" data-parent="#paineis-sobre">SUFRAMA</h3>
+					</div>
+					<div id="segundo2-paragrafo" class="collapse">    
+						<div class="panel-body">
+							<p> <strong>Construção de indicadores para a avaliação socioeconômica dos projetos de interiorização</strong> - O projeto 
+								compreende as atividades de aprimorar os mecanismos de avaliação de projetos de interiorização, com vistas a
+								uma ampla revisão dos Indicadores Econômicos, Sociais e Financeiros dos Projetos de Interiorização da SUFRAMA em
+								sua área de jurisdição.<br>
+								Esses indicadores definem seu escopo de
+								atuação nas 06(seis) Áreas e Políticas Estratégicas, sendo estas:<br><br>
+								<strong>1-Tecnologia: Formação de capital intelectual e formação de alianças estratégicas ou parcerias que desenvolvam
+								estudos e tecnologia<br>
+								2-Inserção internacional Competitiva: Incentivo às exportações<br>
+								3-Desenvolvimento Sustentável Local: Estimular as potencialidades regionais e as questões ambientais<br>
+								4-Atração de Investimentos: Adensamento das cadeias produtivas e atração de novos pólos produtivos<br>
+								5-Logística: Investimentos em infra-estrutura de armazenamento, energia e comunicação<br>
+								6-Desenvolvimento Institucional: Desenvolvimento interno e aprimoramento das relações inter institucional<br><br></strong>
+								A sinergia destas seis áreas tem como foco primordial a promoção do desenvolvimento sustentável, algo possível de ser
+								efetivado por meio da integração regional e distribuição de renda.
+								No que se refere ao desenvolvimento sustentável o mesmo deve contribuir para a construção de um modelo de
+								desenvolvimento da Amazônia, criando condições para a utilização sustentável da capacidade produtiva dos recursos
+								naturais, asseguradas a viabilidade econômica e a melhoria da qualidade de vida das populações locais.  </p> 
+						</div>
+					</div>
+				</div>
+
+
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title" data-toggle="collapse" data-target="#terceiro3-paragrafo" data-parent="#paineis-sobre">PNUD BRASIL </h3>
+					</div>
+					<div id="terceiro3-paragrafo" class="collapse">
+						<div class="panel-body">
+							<p > <strong>Programa das Nações Unidas para o Desenvolvimento no Brasil: projeto de desenvolvimento sustentável pelo uso produtivo 
+								de energia elétrica:</strong> O projeto resulta num documento onde a analisa a promoção do Desenvolvimento Local, por meio do uso produtivo,
+								educativo e eficiente dos serviços de energia elétrica através da integração das estruturas Produtiva, Social e Institucional,
+								reunindo quatro segmentos estratégicos, tendo por base:<br> <br>I. a Promoção da Inclusão Social, com foco no uso eficiente,
+								produtivo e social da energia elétrica como um vetor para o desenvolvimento;<br> II) a Estruturação dos Arranjos Produtivos
+								Locais;<br> III) o Fortalecimento do Ambiente de Clima de Negócios, especialmente os voltados para a produção de maquinas
+								e equipamentos para apoio a geração de energia; <br> IV) a Modernização e ampliação da Infra-estrutura Econômica Pública
+								e Privada.</p> 
+						</div>
+					</div>
+				</div>
+
+
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title" data-toggle="collapse" data-target="#terceiro33-paragrafo" data-parent="#paineis-sobre">Ministério Público Federal</h3>
+					</div>
+					<div id="terceiro33-paragrafo" class="collapse">
+						<div class="panel-body">
+							<p > <strong>Desenvolvimento do planejamento estratégico 2009-2014:</strong> O planejamento estratégico é de fundamental importância para as organizações
+							sejam elas público ou privada. É a ignição , o ponto de partida para as ações que são e serão realizadas ate alcançar a visão de futuro planejada. <br> Neste 
+						projeto foram realizadas pesquisas e levantamentos de indicadores que melhor se encaixavam onde a instituição queria estar - <strong>Visão</strong>, e através 
+						da definição de seus valores, objetivos, missão, indicadores e metas, foi realizado o planejamento 2009 - 2014.</p> 
+						</div>
+					</div>
+				</div>
+								<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title" data-toggle="collapse" data-target="#quarto4-paragrafo" data-parent="#paineis-sobre">PRODAM</h3>
+					</div>
+					<div id="quarto4-paragrafo" class="collapse">
+						<div class="panel-body">
+							<p > <strong>Pesquisa de clima organizacional:</strong> O clima organizacional é o retrato da realidade da empresa e influência diretamente na Eficiência, em sua produtividade.
+							Neste projeto foram feitos levantamentos e pesquisas internas que mediram o grau de comprometimento de cada departamento desta instituição.
+						O grau de comprometimento é variável dependendo de itens como a satisfação, motivação, relacionamento entre os colaboradores e lideres, modelos de gestão e política de cargos e salários.<br>Através deste projeto foram adotadas políticas de melhoria que incentivam o trabalho de cada colaborador. </p> 
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>  
+	</section>
+
+	<section id="projet0s" class="projetos container">    <!-- PROJETOS -->    
+		<h2> Projetos</h2>
+		<div class="row">
+			<div class="col-sm-6 col-md-4 col-lg-3 " id="1">
+				<figure class="thumbnail">
+					<img src="img/projetos/casa-castelo.png" alt="Foto casa-castelo">
+					<figcaption class="caption">
+						<h3>Circuito para evitar o calço hidráulico em motores de combustão</h3>
+						<p>Projeto desenvolvido como Trabalho de Conclusão de Curso sob orientação do Professor Gerson Meirelles.
+							O bloqueio hidrostático, mais conhecido como calço hidráulico, é um fenômeno resultante da admissão de um fluido incompressível no Motor à combustão interna. Os efeitos deste fenômeno foram descobertos inicialmente com o advento de máquinas, em que o excesso de vapor dentro do cilindro impediria a compressão normal do curso, fazendo com que a biela perfure a fornalha. Tais catástrofes levaram os especialistas a desenvolver drenos do cilindro, o que permitiria esgotar o excesso vapor antes que o calço ocorresse. O calço hidráulico ocorre quando o fluido chega à câmara de combustão. Como resultado, os pistões, em um motor de 4 tempos, são impedidos de girar através do curso de compressão, levando a falha que pode se tornar catastrófica. Muitas vezes, a avaria é tão grande que o condutor acaba tendo que comprar um novo motor, pois nem sempre a retífica os torna tão resistentes quanto aos originais de fábrica. Ainda que os efeitos do bloqueio hidrostático nos motores a vapor tenham sido evitados devido a adição de drenos, fazendo com que a pressão excessiva fosse aliviada, nos motores de combustão não seriam permitidos aderir a esses sistemas. Este estudo se concentra no desenvolvimento de algumas formas para impedir tais efeitos e seja viável para implementação em motor de combustão interna de automóveis de passeio. À medida que os recentes avanços tecnológicos começam a dominar a esfera da indústria, muitas soluções surgiram e auxiliam ao homem. Devido às constantes demandas por soluções, a implementação de eletrônicos em sistemas mecânicos é repetidamente visto como ponto comum, podendo ser observada em muitas invenções onde são necessários circuitos eletrônicos para que a máquina opere, funcione a contento ou eficazmente. O seu uso facilita a detecção de um problema de forma rápida evitando de fato prejuízos enormes. O uso microcontroladores juntamente com sensores, possibilita uma serie de soluções antes tida como impossíveis de serem corrigidas.<br>The hydrostatic blockage, better known as hydraulic shim, is a phenomenon resulting from the admission of an incompressible fluid in the engine to internal combustion. The effects of this phenomenon were first discovered with the advent of steam engines, excess steam inside the cylinder would prevent normal stroke compression, causing the rod to puncture the furnace. Such disasters led experts to develop cylinder drains, which would allow excess steam to be exhausted before the chock occurred. Hydraulic shocking occurs when fluid reaches the combustion chamber. As a result, pistons in a 4-stroke engine are prevented from rotating through the compression stroke, leading to catastrophic failure. Often, the damage is so great that the driver ends up having to buy a new engine because it does not always rectify them as hard as they are factory. Although the effects of hydrostatic blockage on steam engines were avoided due to the addition of drains, causing excess pressure to be relieved, combustion engines would not be susceptible to such systems. As a result, this study focuses on developing some ways to prevent such effects and is feasible for implementation in passenger car internal combustion engines. As recent technological advances begin to dominate many solutions have emerged and aid man. Due to the constant demands for solutions, the implementation of electronics in mechanical systems is repeatedly seen as commonplace and can be seen in many inventions where electronic circuits are required for effective operation. Its use facilitates in the quick detection of the problem avoiding in fact huge damages. The use of microcontrollers in conjunction with sensors makes possible a series of solutions previously seen as impossible to solve.--></p>
+					</figcaption>
+				</figure>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<figure class="thumbnail">
+					<img src="img/projetos/casa-lago.png" alt="Foto casa-lago">
+					<figcaption class="caption">
+						<h3>Projeto de refrigeração</h3>
+						<p>RESUMO BREVE</p>
+					</figcaption>
+				</figure>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<figure class="thumbnail">
+					<img src="img/projetos/mercado-marapira.png" alt="Foto mercado-marapira">
+					<figcaption class="caption">
+						<h3>Sistema de energização de semáforos com o uso de sensores Piezo elétrico</h3>
+						<p>RESUMO BREVE</p>
+					</figcaption>
+				</figure>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<figure class="thumbnail">
+					<img src="img/projetos/palacio-dionisio.png" alt="Foto palacio-dionisio">
+					<figcaption class="caption">
+						<h3>Sistema de estacionamento automatizado.</h3>
+						<p><br><br><br><br></p>
+					</figcaption>
+				</figure>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<figure class="thumbnail">
+					<img src="img/plan.jpg" alt="Imagem de Tumisu por Pixabay ">
+					<figcaption class="caption">
+						<h3>Ministério Público Federal: desenvolvimento do planejamento estratégico 2009-2014.</h3>
+						<p>RESUMO BREVE</p>
+					</figcaption>
+				</figure>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<figure class="thumbnail">
+					<img src="img/feedback.jpg" alt="Imagem de mohamed Hassan por Pixabay ">
+					<figcaption class="caption">
+						<h3>PRODAM (2009): pesquisa de clima organizacional</h3>
+						<p>RESUMO BREVE</p>
+					</figcaption>
+				</figure>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<figure class="thumbnail">
+					<img src="img/projetos/residencia-ludi.png" alt="Foto residencia-ludi">
+					<figcaption class="caption">
+						<h3>SUFRAMA (2008): construção de indicadores para a avaliação socioeconômica dos projetos de interiorização da SUFRAMA</h3>
+						<p>RESUMO BREVE</p>
+					</figcaption>
+				</figure>
+			</div>
+			<div class="col-sm-6 col-md-4 col-lg-3">
+				<figure class="thumbnail">
+					<img src="img/eletric2.jpg" alt="Imagem de NickyPe por Pixabay ">
+					<figcaption class="caption">
+						<h3>PNUD BRASIL (Programa das Nações Unidas para o Desenvolvimento no Brasil: projeto de desenvolvimento sustentável pelo uso produtivo de energia elétrica</h3>
+						<p>RESUMO BREVE</p>
+					</figcaption>
+				</figure>
+			</div>
+		</div>
+	</section>
+
+
+	
+ 
+	<footer>								<!-- rodape -->
+		<address>                           <!-- tag simples e rapida para endereços e dados curtos -->
+			Powered by Kenji Rocha Nakajima - 2021.<br>    <!-- pular linha -->
+			<strong>Fifth-Labs </strong>is an urban innovation company working to radically improve quality of life in cities for all.  <!-- strong: negrito -->
+		</address>
+	</footer>
+
+	<script src="jquery.js"></script>
+	<script src="bootstrap.min.js"></script>
+	<script src="navbar-animation-fix.js"></script>
+</body>
+</html> 
