@@ -3,7 +3,77 @@ body {
 	font-family: 'Open Sans',Arial,sans-serif;
 	margin-top:20px;
 
+
+
 }
+
+.hahaha{
+	color: #fff;
+	animation-duration: 8s;
+	animation-name:cor_fonte;
+	animation-iteration-count: infinite; 
+	
+	
+}
+	a{
+		
+		animation-duration: 2s;
+		animation-name:brilho;
+		animation-iteration-count: infinite;
+		text-decoration: none;
+	}
+ @keyframes cor_fonte{  
+		0, 100%{color: #fff}
+		25%{color: #fff}
+		50%{color:#fff}
+		75%{color:#fff}
+	}
+	@keyframes brilho{
+		50%{text-shadow: 0px 0px 9px}
+		
+	}
+	#icon{
+		width: 30px;
+		cursor: pointer;
+	}
+/*	nav . {
+		flex: 1;
+		text-align: right;
+	}*/
+	:root{
+		--primary-color: #edf2fc;
+		--secondary-color: #212121;
+	}
+	.dark-theme:root{
+		--primary-color: #000106;
+		--secondary-color:#fff;
+		
+	}
+	.home-link{
+			position: fixed;
+			width: 60px;
+			height: 60px;
+			bottom: 60px;
+			right: 40px;
+			background-color: #dac50b;
+			color: #FFF;
+			border-radius: 50px;
+			text-align: center;
+			font-size: 30px;
+			box-shadow: 1px 1px 2px #888;
+			z-index: 1000;
+			right: 5px;
+		}
+		.fa-home{
+			margin-top: 16px;
+		}
+		.home-link:hover{
+			background: #3a4401;
+			transform: scale(1.2);
+		}
+	
+
+
 
 .projetos h2{
 	font-size: 30px;
